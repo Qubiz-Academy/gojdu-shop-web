@@ -1,0 +1,26 @@
+<h1 *ngIf="item">
+    {{item.name}}
+</h1>
+<form *ngIf="item" (submit)="Save()">
+    <div class="form-group">
+        <label>
+            name:
+        </label>
+        <input class="form-control" [(ngModel)]="item.name" name="name">
+    </div>
+    <div class="form-group">
+        <label>
+            price:
+        </label>
+        <input class="form-control" [(ngModel)]="item.price" name="price">
+    </div>
+    <div class="form-group">
+        <label>
+            description:
+        </label>
+        <input class="form-control" [(ngModel)]="item.description" name="id">
+    </div>
+    <button class="btn btn-primary" type="submit">
+        Save
+    </button>
+</form>

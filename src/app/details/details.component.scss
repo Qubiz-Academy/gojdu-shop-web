@@ -1,0 +1,16 @@
+.bold{
+    font-weight: bold;
+}
+.capitalise{
+    text-transform: capitalize;
+}
+.grid{
+    display:grid;
+    grid-template-columns: 1fr auto;
+    >div{
+        grid-column: 2;
+    }
+    .img-container{
+        grid-column: 1;
+    }
+}

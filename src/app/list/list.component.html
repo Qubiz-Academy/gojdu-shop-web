@@ -1,0 +1,18 @@
+<button class="btn btn-primary" [routerLink]="['Create']">Create</button>
+<ul class="grid list-unstyled" >
+  <li *ngFor="let item of items | async" (click)="router.navigate(['Details', item.id])">
+  
+    <div class="img-container">
+      <img [src]="item.image">
+    </div>
+    <div class="name">
+      {{item.name}}
+    </div>
+    <div class="price">
+      {{item.price}}
+    </div>
+    <div>
+      <a [routerLink]="['/Edit', item.id]">Edit</a> | <delete-item [id]="item.id" (deleted)="loadItems()"></delete-item>
+    </div>
+  </li>
+</ul>

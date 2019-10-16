@@ -1,0 +1,16 @@
+<h1>
+    New
+</h1>
+<form (submit)="Save($event)">
+    <label>
+        name:
+        <input [(ngModel)]="item.name" name="name">
+    </label>
+    <label>
+        price:
+        <input [(ngModel)]="item.price" name="price">
+    </label>
+    <button type="submit">
+        Save
+    </button>
+</form>

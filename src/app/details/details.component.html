@@ -1,0 +1,19 @@
+<h1 *ngIf="item">
+    {{item.name}}
+</h1>
+<div class="grid">
+    <div class="img-container">
+        <img [src]="item.image">
+    </div>
+    <div>
+        <div>
+            <span class="bold capitalise">ID:</span> {{id}}
+        </div>
+        <div>
+                <span class="bold capitalise">price: </span> {{item.price}}
+        </div>
+        <div>
+                <span class="bold capitalise">description: </span> {{item.description}}
+        </div>
+    </div>
+</div>
