@@ -16,12 +16,13 @@ export class DeleteItemComponent implements OnInit {
 
   ngOnInit() {
   }
-  open(content) {
+  open(content,event) {
     this.modalService.open(content, {ariaLabelledBy: 'modal-basic-title'}).result.then((result) => {
       this.itemservice.deleteitem(this.id)
       this.deleted.emit();
     }, (reason) => {
     });
+    event.stopPropagation();
   }
 
 }

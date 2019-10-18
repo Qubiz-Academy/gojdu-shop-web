@@ -19,14 +19,16 @@ export class ItemService {
         .set({
             name:item.name,
             price:item.price,
-            description:item.description
+            description:item.description,
+            image:item.image
         },{merge: true})
     }
     createitem(item) {
         this.aft.doc("items/" +this.aft.createId()).set({
             name: item.name,
             price: item.price,
-            description:item.description || ''
+            description:item.description || '',
+            image:item.image || ''
         })
     }
     deleteitem(id) {
